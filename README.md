@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Advait's Farm Birthday Party Invitation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based birthday party invitation app with a fun farm theme! This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## 🌐 Live App
+
+The app is deployed and live at: [https://advait-hbd-2025.web.app](https://advait-hbd-2025.web.app)
+
+## 🚀 Quick Deployment
+
+To deploy the app to Firebase hosting, simply run:
+
+```bash
+./deploy.sh
+```
+
+This script will:
+1. Build the React app for production
+2. Deploy to Firebase hosting
+3. Provide the live URL
 
 ## Available Scripts
 
@@ -63,7 +80,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app is deployed using Firebase hosting. Use the provided `deploy.sh` script for easy deployment:
+
+```bash
+./deploy.sh
+```
+
+**Manual deployment steps:**
+1. Build the app: `npm run build`
+2. Deploy to Firebase: `firebase deploy`
+
+**Live URL:** [https://advait-hbd-2025.web.app](https://advait-hbd-2025.web.app)
 
 ### `npm run build` fails to minify
 
