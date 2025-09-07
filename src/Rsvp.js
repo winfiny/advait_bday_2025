@@ -16,11 +16,18 @@ const Rsvp = () => {
     noMessage: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false); // To disable button on submit
+  const [phoneError, setPhoneError] = useState(''); // --- NEW state for the error message ---
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }));
+    if (name === 'phone') {
+      // This will remove any character that is not a digit
+      const numericValue = value.replace(/[^0-9()+-]/g, '');
+      setFormData(prevState => ({ ...prevState, [name]: numericValue }));
+    } else {
+      setFormData(prevState => ({ ...prevState, [name]: value }));
+    }
   };
 
   const handleCounterChange = (name, value) => {
@@ -30,6 +37,14 @@ const Rsvp = () => {
   // --- UPDATED handleSubmit FUNCTION ---
   const handleSubmit = (e) => {
     e.preventDefault();
+    // --- Validation Logic ---
+    const phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    if (!phoneRegex.test(formData.phone)) {
+      setPhoneError('Please enter a valid 10-digit phone number.');
+      return; // Stop the submission
+    }
+    
+    setPhoneError(''); // Clear error if validation passes
     setIsSubmitting(true);
 
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyH0r6gLbkdkjxyYUG5L7fwnpnVftoimtcCEBQ1iP4n7ICpNNfJXgiiH6ay6VUwN2flBw/exec"; // ⚠️ Paste the URL you copied
@@ -99,6 +114,7 @@ const Rsvp = () => {
             
             <label>Phone Number</label>
             <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required />
+            {phoneError && <p className="error-message">{phoneError}</p>}
             
             <div className="guest-count">
               <Counter 
@@ -134,7 +150,9 @@ const Rsvp = () => {
         )}
 
         {attendance && (
-          <button type="submit" className="submit-button">Submit Response</button>
+          <button type="submit" className="submit-button" disabled={isSubmitting}>
+          {isSubmitting ? <div className="spinner"></div> : 'Submit Response'}
+        </button>
         )}
       </form>
       {/* <Activities /> */}
