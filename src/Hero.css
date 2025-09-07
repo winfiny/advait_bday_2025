@@ -1,6 +1,6 @@
 /* src/Hero.css */
 .hero-container {
-    height: 50vh;
+    height: 40vh;
     background-size: cover;
     /* --- KEY CHANGE HERE --- */
     background-position: center top; /* Focus on the top center of the image */
@@ -25,7 +25,7 @@
   
   .hero-container h1 {
     font-family: var(--font-headings);
-    font-size: 10rem;
+    font-size: 7rem;
     margin: 0;
     color: var(--sunny-yellow);
   }

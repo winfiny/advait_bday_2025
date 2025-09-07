@@ -58,12 +58,12 @@ const Rsvp = () => {
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      alert('Thank you for your response!');
-      navigate('/'); // Go back to the main page
+      // alert('Thank you for your response!');
+      navigate('/thank-you'); 
     })
     .catch((error) => {
       console.error('Error:', error);
-      alert('There was an error submitting your response. Please try again.');
+     // alert('There was an error submitting your response. Please try again.');
       setIsSubmitting(false); // Re-enable button on error
     });
   };
@@ -137,7 +137,7 @@ const Rsvp = () => {
           <button type="submit" className="submit-button">Submit Response</button>
         )}
       </form>
-      <Activities />
+      {/* <Activities /> */}
     </main>
   );
 };

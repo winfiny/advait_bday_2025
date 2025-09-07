@@ -1,0 +1,103 @@
+.thank-you-main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .thank-you-card {
+    text-align: center;
+    border-color: var(--grass-green);
+  }
+  
+  .thank-you-card h1 {
+    font-family: var(--font-headings);
+    font-size: 3.5rem;
+    color: var(--grass-green);
+    margin: 0;
+  }
+  
+  .thank-you-card .subtitle {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  
+  .home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--sky-blue);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  .home-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .farm-info-card {
+    text-align: left;
+  }
+  
+  .farm-info-card h2 {
+    text-align: center;
+  }
+  
+  .farm-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .info-section {
+    margin-bottom: 30px;
+  }
+  
+  .info-section h3 {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    border-bottom: 2px solid var(--sunny-yellow);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .farm-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .activities-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .activities-list li {
+    background-color: #fdfaf2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .activities-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+/* --- ADD THESE STYLES FOR THE VIDEO --- */
+.video-section {
+    margin-top: 40px;
+  }
+  
+  .video-section video {
+    border-radius: 8px; /* Match the style of the images */
+    margin-top: 10px;
+  }

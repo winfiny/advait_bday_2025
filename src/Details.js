@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom'; // Import Link
 const Details = ({ details }) => {
   return (
     <section className="card details-card">
-      <h2>Oink, Moo, Cock-a-Doodle-Doo! 🐮</h2>
-      <p className="intro-text">
-        Put on your best boots and join us for a day of farm-tastic fun as we celebrate our little farmer turning {details.age}!
-      </p>
+      <h2>Join us for farm-tastic fun with Advait 🐮</h2>
       
       <div className="info-grid">
         <div className="info-item">
@@ -32,7 +29,7 @@ const Details = ({ details }) => {
       </div>
       
       <div className="rsvp-section-in-details">
-        <p>Please RSVP by <strong>{details.rsvpDate}</strong> to let us know if you can make it!</p>
+
         {/* --- THIS IS THE UPDATED BUTTON --- */}
         <Link to="/rsvp" className="rsvp-button">
         💌 RSVP

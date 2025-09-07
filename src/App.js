@@ -3,17 +3,18 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Rsvp from './Rsvp';
+import ThankYou from './ThankYou';
 
 function App() {
   const partyDetails = {
-    childsName: "Leo",
+    childsName: "Advait",
     age: "4",
-    date: "Saturday, October 25, 2025",
-    time: "11:00 AM - 2:00 PM",
-    locationName: "Lemos Farm",
+    date: "Sunday, September 14, 2025",
+    time: "1:30 PM - 5:00 PM",
+    locationName: "Lemos Farm, Joe's Picnic Area",
     locationAddress: "12320 San Mateo Rd, Half Moon Bay, CA 94019",
-    rsvpDate: "October 15th",
-    rsvpContact: "mom-or-dad@email.com"
+    rsvpDate: "September 12th",
+    rsvpContact: "barone321@email.com"
   };
 
   return (
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home partyDetails={partyDetails} />} />
           <Route path="/rsvp" element={<Rsvp partyDetails={partyDetails}/>} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
         <footer>
           <p>We can't wait to celebrate with you!</p>
