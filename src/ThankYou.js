@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ThankYou.css';
 import joesAreaImage from './joe-area.jpg'; // We'll add this image
+import partyChecking from './party-checkin.jpg';
 
 const ThankYou = () => {
   return (
@@ -19,6 +20,14 @@ const ThankYou = () => {
         <p className="farm-intro">
           Lemos Farm is a wonderful place for a party! It's designed to be fun for everyone, with tons of activities for kids and a relaxing, fun atmosphere for adults.
         </p>
+
+        <div className="info-section">
+          <h3>How to Check-in as a Party Guest</h3>
+          <p>
+            When you arrive at the main entrance, please reach to Party check in line and let the staff know you are guests for <b>**Advait's  Birthday Party**</b>. They will direct you toward our reserved spot at Joe's Area.
+          </p>
+          <img src={partyChecking} alt="Party Check in Line at Lemos Farm" className="farm-image" />
+        </div>
 
         <div className="info-section">
           <h3>Your Party Area: Joe's Picnic Area</h3>
