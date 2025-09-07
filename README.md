@@ -92,6 +92,28 @@ The app is deployed using Firebase hosting. Use the provided `deploy.sh` script 
 
 **Live URL:** [https://advait-hbd-2025.web.app](https://advait-hbd-2025.web.app)
 
+## 🔧 Automatic Deployment Setup
+
+The app is configured for automatic deployment to Firebase when code is pushed to the `main` branch using GitHub Actions.
+
+### Setup Instructions:
+
+1. **Generate Firebase Service Account Key:**
+   ```bash
+   firebase projects:list
+   firebase projects:addfirebase advait-hbd-2025 --json
+   ```
+   Or go to [Firebase Console](https://console.firebase.google.com/project/advait-hbd-2025/settings/serviceaccounts/adminsdk) → Project Settings → Service Accounts → Generate New Private Key
+
+2. **Add GitHub Secret:**
+   - Go to your GitHub repository → Settings → Secrets and Variables → Actions
+   - Add a new secret named: `FIREBASE_SERVICE_ACCOUNT_ADVAIT_HBD_2025`
+   - Paste the entire JSON content of the service account key
+
+3. **Push to Deploy:**
+   - Any push to the `main` branch will automatically trigger deployment
+   - Pull requests will also run builds for testing
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
