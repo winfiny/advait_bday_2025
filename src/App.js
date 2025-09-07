@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Rsvp from './Rsvp';
 import ThankYou from './ThankYou';
+import ScrollToTop from './ScrollToTop'; 
 
 function App() {
   const partyDetails = {
@@ -20,6 +21,7 @@ function App() {
   return (
     // BrowserRouter must be the top-level component
     <BrowserRouter>
+    <ScrollToTop />
       <div className="App">
         <Routes>
           <Route path="/" element={<Home partyDetails={partyDetails} />} />
