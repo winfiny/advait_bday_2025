@@ -1,0 +1,51 @@
+/* src/Hero.css */
+.hero-container {
+    height: 50vh;
+    background-size: cover;
+    /* --- KEY CHANGE HERE --- */
+    background-position: center top; /* Focus on the top center of the image */
+    /* ----------------------- */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-container h1 {
+    font-family: var(--font-headings);
+    font-size: 10rem;
+    margin: 0;
+    color: var(--sunny-yellow);
+  }
+  
+  .hero-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* --- RESPONSIVE STYLES --- */
+  @media (max-width: 600px) {
+    .hero-container {
+      height: 40vh; /* Shorter banner on mobile */
+    }
+    .hero-container h1 {
+      font-size: 3rem; /* Smaller main title */
+    }
+    .hero-container p {
+      font-size: 1.1rem; /* Smaller subtitle */
+      padding: 0 10px;
+    }
+  }

@@ -1,0 +1,120 @@
+.rsvp-main {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .rsvp-form {
+    text-align: left;
+  }
+  
+  .attendance-group {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .attendance-group legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 0;
+    color: var(--dark-text);
+  }
+  
+  .attendance-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fdfaf2;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .attendance-group label:has(input:checked) {
+    border-color: var(--grass-green);
+    font-weight: bold;
+  }
+  
+  .attendance-group input[type="radio"] {
+    width: 1.2em;
+    height: 1.2em;
+  }
+  
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 2px dashed var(--sunny-yellow);
+    padding-top: 25px;
+  }
+  
+  .form-fields label {
+    font-weight: bold;
+    margin-bottom: -10px;
+  }
+  
+  .form-fields input,
+  .form-fields textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    box-sizing: border-box;
+  }
+  
+  .form-fields .guest-count {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-fields .guest-count > div {
+    flex: 1;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    background-color: var(--grass-green);
+    color: var(--light-text);
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    transform: scale(1.02);
+    background-color: #6a9144;
+  }
+
+  .form-fields .guest-count {
+    /* --- DESKTOP STYLES --- */
+    /* This makes the counters sit side-by-side on larger screens */
+    display: flex;
+    flex-direction: row; /* Default direction is row */
+    gap: 20px; /* Space between the two counters */
+  }
+  
+  /* ... other styles ... */
+  
+  /* --- ADD THIS MEDIA QUERY AT THE END --- */
+  @media (max-width: 600px) {
+    .form-fields .guest-count {
+      /* This makes the counters stack vertically on mobile */
+      flex-direction: column;
+      gap: 0; /* Remove the side gap */
+    }
+  }

@@ -1,0 +1,83 @@
+/* src/Details.css */
+.details-card .intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .info-item {
+    padding: 15px;
+    background-color: #fdfaf2;
+    border-radius: 8px;
+    border: 2px dashed var(--grass-green);
+  }
+  
+  .info-item h3 {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--grass-green);
+  }
+  
+  .info-item p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+  }
+  
+  .map-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--sky-blue);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .map-link:hover {
+    transform: scale(1.05);
+  }
+  
+  /* --- RESPONSIVE STYLES --- */
+  @media (max-width: 600px) {
+    .info-grid {
+      grid-template-columns: 1fr; /* Stack the columns */
+    }
+    .details-card .intro-text {
+      font-size: 1.1rem; /* Slightly smaller text */
+    }
+  }
+
+  /* ... other styles in Details.css ... */
+
+/* --- UPDATED RSVP BUTTON STYLES --- */
+.rsvp-button {
+    display: inline-block;
+    background-color: var(--grass-green);
+    color: var(--light-text);
+    
+    /* --- Style Changes for a BIGGER look --- */
+    padding: 18px 40px; /* Increased padding */
+    font-size: 1.8rem;    /* Increased font size */
+    
+    border-radius: 40px;
+    text-decoration: none;
+    font-family: var(--font-headings);
+    margin: 10px 0;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Added a subtle shadow */
+  }
+  
+  .rsvp-button:hover {
+    transform: scale(1.05);
+    background-color: #6a9144;
+  }
+  
+  /* ... responsive styles ... */

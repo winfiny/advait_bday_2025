@@ -1,0 +1,48 @@
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .counter-container label {
+    font-weight: bold;
+    margin-bottom: 0; /* Override form styles */
+  }
+  
+  .counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .counter-button {
+    background-color: var(--sky-blue);
+    color: var(--dark-text);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    transition: background-color 0.2s;
+  }
+  
+  .counter-button:hover {
+    background-color: #9ac9e7;
+  }
+  
+  .counter-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
+  }

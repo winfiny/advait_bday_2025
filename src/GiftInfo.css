@@ -1,0 +1,48 @@
+/* src/Rsvp.css */
+.rsvp-card p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .rsvp-button {
+    display: inline-block;
+    background-color: var(--grass-green);
+    color: var(--light-text);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    margin: 20px 0;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .rsvp-button:hover {
+    transform: scale(1.05);
+    background-color: #6a9144;
+  }
+  
+  .gift-info {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dashed var(--sunny-yellow);
+  }
+  
+  .gift-info p {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+  }
+  
+  /* --- RESPONSIVE STYLES --- */
+  @media (max-width: 600px) {
+    .rsvp-card p {
+      font-size: 1.1rem; /* Smaller text */
+    }
+    .rsvp-button {
+      font-size: 1.2rem; /* Smaller button text */
+      padding: 12px 25px; /* Smaller button */
+    }
+  }
